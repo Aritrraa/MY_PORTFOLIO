@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio — How It Works (Beginner Guide)</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: 'Segoe UI', sans-serif; font-size: 14px; color: #1a1a2e; background: #fff; padding: 40px; max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 2rem; color: #FF2D55; border-bottom: 3px solid #FF2D55; padding-bottom: 10px; margin-bottom: 8px; }
+  h2 { font-size: 1.35rem; color: #0066FF; margin: 30px 0 10px; border-left: 4px solid #0066FF; padding-left: 10px; }
+  h3 { font-size: 1.05rem; color: #BF00FF; margin: 20px 0 6px; }
+  p { line-height: 1.8; margin-bottom: 10px; color: #333; }
+  code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 12px; color: #c0392b; }
+  pre { background: #1a1a2e; color: #00FF88; padding: 16px; border-radius: 8px; font-size: 12px; overflow-x: auto; margin: 12px 0; line-height: 1.6; }
+  .box { background: #f8f9ff; border: 1px solid #e0e0ff; border-radius: 8px; padding: 16px; margin: 14px 0; }
+  .tip { background: #fffbe6; border-left: 4px solid #FFD700; padding: 12px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .feature { display: flex; gap: 12px; align-items: flex-start; margin: 10px 0; }
+  .badge { background: #FF2D55; color: #fff; padding: 2px 10px; border-radius: 100px; font-size: 11px; font-weight: bold; white-space: nowrap; margin-top: 3px; }
+  .badge.blue { background: #0066FF; }
+  .badge.purple { background: #BF00FF; }
+  .badge.green { background: #00AA55; }
+  .badge.orange { background: #FF6B35; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+  th { background: #1a1a2e; color: #fff; padding: 8px 12px; text-align: left; font-size: 12px; }
+  td { padding: 8px 12px; border-bottom: 1px solid #eee; font-size: 13px; }
+  tr:nth-child(even) td { background: #f9f9f9; }
+  .subtitle { color: #666; font-size: 1rem; margin-bottom: 30px; }
+  .section-num { color: #FF2D55; font-family: 'Courier New'; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+  @media print {
+    body { padding: 20px; }
+    h2 { page-break-before: auto; }
+    pre { white-space: pre-wrap; }
+  }
+</style>
+</head>
+<body>
+
+<div style="text-align:center; padding: 20px 0 30px;">
+  <div style="font-size:3rem; font-weight:900; color:#FF2D55; letter-spacing:4px;">MY PORTFOLIO</div>
+  <div style="font-size:1.1rem; color:#666; margin-top:6px;">Complete Beginner's Guide — How It Works, What Was Used & How It's Connected</div>
+  <div style="margin-top:10px; font-size:0.85rem; color:#999;">By Aritra Das · KIIT 2026 · AI/ML Engineer</div>
+</div>
+
+<!-- ==================== SECTION 1 ==================== -->
+<div class="section-num">01 / Overview</div>
+<h1>What Is This Portfolio?</h1>
+<p>This is a <strong>personal portfolio website</strong> built for Aritra Das — a final-year Computer Science student. The goal is to showcase projects, skills, experience and contact information in a visually stunning, animated, and professional way — just like a resume but on the internet.</p>
+
+<div class="box">
+  <strong>🌐 What you see when you visit the website:</strong>
+  <ul style="margin-top:8px; padding-left:20px; line-height:2;">
+    <li>A cinematic loading splash screen</li>
+    <li>An animated hero section with your name, typewriter text, and floating profile photo</li>
+    <li>Sections: About → Skills → Projects → Experience → Education → Activities → Contact</li>
+    <li>Interactive project cards with mouse-tracking glow</li>
+    <li>A resume modal (PDF viewer popup)</li>
+    <li>Matrix rain background animation</li>
+    <li>Scroll progress bar, back-to-top rocket button</li>
+  </ul>
+</div>
+
+<!-- ==================== SECTION 2 ==================== -->
+<div class="section-num">02 / Tech Stack</div>
+<h1>What Technologies Were Used?</h1>
+
+<table>
+  <tr><th>Technology</th><th>What It Is</th><th>Why We Used It</th></tr>
+  <tr><td><strong>React</strong></td><td>A JavaScript library for building UIs</td><td>Makes building interactive pages easy with reusable components</td></tr>
+  <tr><td><strong>Vite</strong></td><td>A super-fast build tool for web apps</td><td>Starts a dev server instantly; bundles files for deployment</td></tr>
+  <tr><td><strong>CSS</strong></td><td>Stylesheet language for design</td><td>All animations, colors, layouts, glassmorphism effects</td></tr>
+  <tr><td><strong>JavaScript</strong></td><td>Programming language of the web</td><td>Logic: typewriter, matrix rain, cursor, filters, counters</td></tr>
+  <tr><td><strong>GitHub</strong></td><td>Code hosting platform</td><td>Stores the code online; connects to Vercel for deployment</td></tr>
+  <tr><td><strong>Vercel</strong></td><td>Free hosting platform</td><td>Automatically builds and hosts the website from GitHub</td></tr>
+</table>
+
+<div class="tip">💡 <strong>Think of it like this:</strong> React writes what the page shows. CSS makes it look stunning. Vite packages everything together. GitHub stores it. Vercel publishes it to the internet.</div>
+
+<!-- ==================== SECTION 3 ==================== -->
+<div class="section-num">03 / File Structure</div>
+<h1>How Are The Files Organized?</h1>
+<pre>
+MY_PORTFOLIO/                 ← Root folder (pushed to GitHub)
+│
+├── README.md                 ← Description of the project
+├── .gitignore                ← Tells git to ignore node_modules, dist
+├── vercel.json               ← Tells Vercel how to build & where output is
+│
+└── portfolio/                ← The actual React app lives here
+    │
+    ├── index.html            ← The single HTML page (entry point)
+    ├── package.json          ← Lists all dependencies (React, Vite etc.)
+    ├── vite.config.js        ← Vite configuration
+    │
+    ├── public/               ← Static files served as-is
+    │   ├── Aritra_CV_MAIN.pdf   ← Your resume
+    │   ├── Aritra_image.jpg     ← Hero profile photo
+    │   ├── about_photo.jpg      ← About section photo
+    │   └── favicon.svg          ← Browser tab icon
+    │
+    └── src/                  ← Source code (what you write)
+        ├── main.jsx          ← Entry point — mounts React into index.html
+        ├── App.jsx           ← All components and page content
+        └── index.css         ← All styles (animations, colors, layout)
+</pre>
+
+<h2>How Does index.html Connect to React?</h2>
+<p><code>index.html</code> has a single <code>&lt;div id="root"&gt;</code>. React takes over this div and renders everything inside it. The script tag in <code>index.html</code> loads <code>main.jsx</code>:</p>
+<pre>
+&lt;!-- index.html --&gt;
+&lt;div id="root"&gt;&lt;/div&gt;
+&lt;script type="module" src="/src/main.jsx"&gt;&lt;/script&gt;
+</pre>
+<pre>
+// main.jsx — mounts the App component into the #root div
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+
+ReactDOM.createRoot(document.getElementById('root')).render(&lt;App /&gt;)
+</pre>
+
+<!-- ==================== SECTION 4 ==================== -->
+<div class="section-num">04 / React Components</div>
+<h1>What Is a React Component?</h1>
+<p>A <strong>component</strong> is a reusable piece of UI — like a function that returns HTML. Instead of writing one giant HTML file, we split the page into small, focused parts.</p>
+
+<div class="box">
+  <strong>Components used in this portfolio:</strong>
+  <div style="margin-top:12px;">
+    <div class="feature"><span class="badge">SplashScreen</span><p>The cinematic intro screen shown on first load. Types out <code>&gt; INITIALIZING PORTFOLIO...</code> then fades out.</p></div>
+    <div class="feature"><span class="badge blue">Cursor</span><p>Replaces the default browser cursor with a glowing custom red dot + trailing ring.</p></div>
+    <div class="feature"><span class="badge purple">Particles</span><p>Generates 22 floating colored dots that drift upward in the hero background.</p></div>
+    <div class="feature"><span class="badge green">MatrixRain</span><p>Draws falling characters (A-Z, 0-9, Japanese katakana) on an HTML Canvas element.</p></div>
+    <div class="feature"><span class="badge orange">Typewriter</span><p>Cycles through phrases like "AI/ML Engineer", "Flask Developer" — types and deletes them in a loop.</p></div>
+    <div class="feature"><span class="badge">FadeInVisible</span><p>Wraps any content and fades it in when it scrolls into the viewport using IntersectionObserver.</p></div>
+    <div class="feature"><span class="badge blue">CountUp</span><p>Animates numbers from 0 to their target value (e.g. 0 → 8.70 CGPA) when scrolled into view.</p></div>
+    <div class="feature"><span class="badge purple">ScrollProgress</span><p>The thin glowing bar at the top of the page that fills as you scroll down.</p></div>
+    <div class="feature"><span class="badge green">BackToTop</span><p>The 🚀 rocket button that appears after scrolling 400px and returns you to the top.</p></div>
+    <div class="feature"><span class="badge orange">ProjectCard</span><p>Each project card with mouse-tracking glow effect, tech stack tags, and GitHub/Live links.</p></div>
+    <div class="feature"><span class="badge">App (main)</span><p>The root component — assembles all sections (Hero, About, Skills, Projects, etc.) and manages state.</p></div>
+  </div>
+</div>
+
+<!-- ==================== SECTION 5 ==================== -->
+<div class="section-num">05 / Key Concepts</div>
+<h1>Key React Concepts Used</h1>
+
+<h2>useState — Managing Data That Changes</h2>
+<p>When something on the page can change (like which project filter is active, or whether the resume modal is open), we use <code>useState</code>.</p>
+<pre>
+const [filter, setFilter] = useState('all');
+// filter = current value ('all', 'ai', 'web', 'java')
+// setFilter = function to change it
+
+// When you click "AI / ML" button:
+setFilter('ai');  // React re-renders the card list showing only AI projects
+</pre>
+
+<h2>useEffect — Running Code At The Right Time</h2>
+<p>Code that should run after the component loads (like starting an animation, adding an event listener) goes inside <code>useEffect</code>.</p>
+<pre>
+useEffect(() => {
+  // This runs once when the component first appears on screen
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    // This runs when the component is removed — cleanup
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []); // Empty [] means "run once on mount"
+</pre>
+
+<h2>useRef — Grabbing a Real DOM Element</h2>
+<p>When you need to directly control an HTML element (like a canvas or an input), use <code>useRef</code>.</p>
+<pre>
+const canvasRef = useRef(null);
+// Later, in useEffect:
+const canvas = canvasRef.current; // Gets the real &lt;canvas&gt; element
+const ctx = canvas.getContext('2d'); // Draw on it!
+</pre>
+
+<h2>IntersectionObserver — Detecting Scroll Position</h2>
+<p>Used in <code>FadeInVisible</code> and <code>CountUp</code>. It watches an element and fires a callback when it enters the visible area of the screen.</p>
+<pre>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('vis'); // Add class to trigger CSS animation
+    }
+  });
+}, { threshold: 0.1 }); // Trigger when 10% of element is visible
+
+observer.observe(someElement);
+</pre>
+
+<!-- ==================== SECTION 6 ==================== -->
+<div class="section-num">06 / Animations</div>
+<h1>How Do The Animations Work?</h1>
+
+<h2>CSS Keyframe Animations</h2>
+<p>Most visual animations are pure CSS. You define a <code>@keyframes</code> block describing start → end states, then apply it to an element.</p>
+<pre>
+/* Floating profile photo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+.hero-photo { animation: float 5s ease-in-out infinite; }
+/* The photo gently bobs up and down every 5 seconds forever */
+</pre>
+
+<pre>
+/* Scroll progress bar */
+@keyframes underline-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+</pre>
+
+<h2>Matrix Rain — HTML Canvas</h2>
+<p>The matrix rain is drawn using the Canvas 2D API — a low-level drawing surface in the browser. Every 60ms, we:</p>
+<pre>
+1. Fill canvas with a semi-transparent dark overlay (creates "fading trail" effect)
+2. Pick a random character from: A-Z, 0-9, Japanese katakana
+3. Draw it at a random column position, moving downward
+4. When a column reaches the bottom, randomly reset it to the top
+</pre>
+
+<h2>Typewriter Effect</h2>
+<p>A JavaScript <code>setInterval</code> loop adds/removes one character at a time from the displayed text, cycling through phrases:</p>
+<pre>
+phrases = ['AI / ML Engineer', 'Flask Developer', 'JARVIS Builder', ...]
+// Add 1 character every 78ms → looks like typing
+// Remove 1 character every 42ms → looks like deleting (faster)
+// After deleting, move to next phrase and repeat
+</pre>
+
+<h2>Custom Cursor</h2>
+<p>The browser's default cursor is hidden (<code>cursor: none</code> in CSS). Two <code>&lt;div&gt;</code> elements are positioned with JavaScript to follow the mouse — one snaps instantly (small dot), one follows with a smooth lag (ring).</p>
+<pre>
+// Main dot snaps to cursor position
+curRef.current.style.left = mouseX + 'px';
+curRef.current.style.top  = mouseY + 'px';
+
+// Ring uses lerp (linear interpolation) for smooth lag
+ringX += (mouseX - ringX) * 0.12; // Moves 12% closer every frame
+ringRef.current.style.left = ringX + 'px';
+</pre>
+
+<h2>3D Photo Hover Effect</h2>
+<p>On hover, the About section photo gets a CSS 3D transform and a scanline laser effect:</p>
+<pre>
+.about-photo:hover {
+  transform: scale(1.03) rotateY(-5deg) rotateX(5deg); /* 3D tilt */
+  box-shadow: 0 30px 60px rgba(255,45,85,.3);           /* Neon glow */
+}
+
+/* Green laser scanning from top to bottom */
+@keyframes scanline {
+  0%   { top: -30%; }
+  100% { top: 120%; }
+}
+</pre>
+
+<!-- ==================== SECTION 7 ==================== -->
+<div class="section-num">07 / CSS Design System</div>
+<h1>How Is The Design System Built?</h1>
+
+<h2>CSS Custom Properties (Variables)</h2>
+<p>All colors are defined once as variables in <code>:root</code>, so changing one value updates the whole site.</p>
+<pre>
+:root {
+  --r:    #FF2D55;  /* Red — primary accent */
+  --r2:   #FF6B35;  /* Red-orange — gradient end */
+  --b:    #0066FF;  /* Blue */
+  --b2:   #00D4FF;  /* Cyan */
+  --p:    #BF00FF;  /* Purple */
+  --g:    #00FF88;  /* Green */
+  --y:    #FFD700;  /* Gold */
+  --dark: #06060F;  /* Background */
+  --card: #0F0F22;  /* Card background */
+  --text: #F0F0FF;  /* Main text */
+  --muted:#6060A0;  /* Dimmed text */
+}
+</pre>
+
+<h2>Glassmorphism</h2>
+<p>The frosted glass look on the navbar is achieved with:</p>
+<pre>
+nav {
+  background: rgba(6, 6, 15, 0.88);  /* Semi-transparent dark */
+  backdrop-filter: blur(28px);        /* Blur everything behind it */
+  border-bottom: 1px solid rgba(255,45,85,0.15); /* Subtle red border */
+}
+</pre>
+
+<h2>Gradient Text</h2>
+<p>The name "DAS" and other gradient text uses CSS clip:</p>
+<pre>
+.hn2 {
+  background: linear-gradient(135deg, #FF2D55, #FF6B35, #FFD700);
+  -webkit-background-clip: text;       /* Clip gradient to text shape */
+  -webkit-text-fill-color: transparent; /* Hide actual text color */
+}
+</pre>
+
+<!-- ==================== SECTION 8 ==================== -->
+<div class="section-num">08 / Data Flow</div>
+<h1>How Is Everything Connected?</h1>
+
+<pre>
+┌─────────────────────────────────────────────┐
+│                  App.jsx                     │
+│  (State: filter, resumeOpen, activeSection)  │
+│                                             │
+│  ┌──────────┐  ┌──────────┐  ┌───────────┐ │
+│  │Splash    │  │ Scroll   │  │ BackToTop │ │
+│  │Screen    │  │ Progress │  │ Button    │ │
+│  └──────────┘  └──────────┘  └───────────┘ │
+│                                             │
+│  ┌─────────────────────────────────────┐   │
+│  │  &lt;nav&gt; with active link tracking   │   │
+│  └─────────────────────────────────────┘   │
+│                                             │
+│  ┌─────────────────────────────────────┐   │
+│  │  #hero section                      │   │
+│  │  ├── MatrixRain (canvas)            │   │
+│  │  ├── Particles (floating dots)      │   │
+│  │  ├── Typewriter (animated text)     │   │
+│  │  ├── Photo + OrbitRings             │   │
+│  │  └── CountUp stats (6+, 8.70, 2)   │   │
+│  └─────────────────────────────────────┘   │
+│                                             │
+│  ┌─────────────────────────────────────┐   │
+│  │  FadeInVisible wrapper              │   │
+│  │  (wraps every section's content)   │   │
+│  │  Uses IntersectionObserver to      │   │
+│  │  add 'vis' class → CSS animation  │   │
+│  └─────────────────────────────────────┘   │
+│                                             │
+│  ┌─────────────────────────────────────┐   │
+│  │  #projects section                  │   │
+│  │  Filter buttons → setFilter()       │   │
+│  │  projects.filter(cat) → renders     │   │
+│  │  only matching ProjectCards         │   │
+│  └─────────────────────────────────────┘   │
+│                                             │
+│  ┌─────────────────────────────────────┐   │
+│  │  Resume Modal                       │   │
+│  │  resumeOpen state → show/hide       │   │
+│  │  &lt;iframe src="/Aritra_CV.pdf"&gt;     │   │
+│  └─────────────────────────────────────┘   │
+└─────────────────────────────────────────────┘
+         │
+         ▼
+    index.css (all styles, animations, variables)
+         │
+         ▼
+    public/ (images, PDF — served directly)
+</pre>
+
+<!-- ==================== SECTION 9 ==================== -->
+<div class="section-num">09 / Build & Deploy</div>
+<h1>How Does Build & Deployment Work?</h1>
+
+<h2>Development (local)</h2>
+<pre>
+npm run dev
+→ Vite starts a local server at http://localhost:5173
+→ Any file you save auto-refreshes the browser (Hot Module Replacement)
+→ Fast — no page reload needed
+</pre>
+
+<h2>Production Build</h2>
+<pre>
+npm run build
+→ Vite bundles all .jsx + .css files into optimized .js and .css
+→ Output goes to portfolio/dist/
+→ dist/index.html  ← The final single HTML file
+→ dist/assets/index.js   ← All React code, minified
+→ dist/assets/index.css  ← All CSS, minified
+</pre>
+
+<h2>GitHub → Vercel Pipeline</h2>
+<pre>
+You push code to GitHub
+       ↓
+Vercel detects the new commit automatically
+       ↓
+Vercel runs: npm install → npm run build
+       ↓
+Vercel takes the dist/ folder and serves it globally via CDN
+       ↓
+Your portfolio is live at yoursite.vercel.app within ~60 seconds
+</pre>
+
+<div class="tip">💡 <strong>vercel.json</strong> inside <code>portfolio/</code> tells Vercel: use <code>npm run build</code> as build command and serve the output from the <code>dist</code> folder.</div>
+
+<!-- ==================== SECTION 10 ==================== -->
+<div class="section-num">10 / Summary</div>
+<h1>Quick Reference Summary</h1>
+
+<table>
+  <tr><th>What</th><th>Where</th><th>How</th></tr>
+  <tr><td>Page structure</td><td>App.jsx</td><td>React components (functions returning JSX)</td></tr>
+  <tr><td>All styling</td><td>index.css</td><td>CSS variables, keyframes, flexbox, grid</td></tr>
+  <tr><td>Static assets</td><td>public/</td><td>Served directly, referenced by URL (/file.jpg)</td></tr>
+  <tr><td>Animations</td><td>index.css + App.jsx</td><td>CSS keyframes + JS Canvas + IntersectionObserver</td></tr>
+  <tr><td>Scroll effects</td><td>App.jsx</td><td>window.addEventListener('scroll', ...) + useState</td></tr>
+  <tr><td>Project filter</td><td>App.jsx</td><td>useState + Array.filter() on projects array</td></tr>
+  <tr><td>Resume modal</td><td>App.jsx</td><td>useState(false) → toggle CSS class 'open'</td></tr>
+  <tr><td>Custom cursor</td><td>App.jsx</td><td>mousemove event + requestAnimationFrame</td></tr>
+  <tr><td>Matrix rain</td><td>App.jsx</td><td>HTML5 Canvas 2D API + setInterval</td></tr>
+  <tr><td>Build</td><td>terminal</td><td>npm run build → dist/</td></tr>
+  <tr><td>Host</td><td>Vercel</td><td>Auto-deploys from GitHub on every push</td></tr>
+</table>
+
+<div style="margin-top:40px; text-align:center; padding: 20px; border-top: 2px solid #FF2D55; color: #999; font-size: 0.85rem;">
+  Aritra Das · KIIT Bhubaneswar · CSE 2026 · AI/ML Engineer · aritradas405@gmail.com
+  <br>github.com/Aritrraa · linkedin.com/in/aritra-das-a180b4251
+</div>
+
+</body>
+</html>
