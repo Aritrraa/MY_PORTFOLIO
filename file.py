@@ -1,0 +1,1 @@
+Now let me build the full upgraded version — both internships, resume download button, more color, more animation, more stunning!
