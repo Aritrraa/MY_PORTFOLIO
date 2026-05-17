@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd portfolio && npm install && npm run build",
-  "outputDirectory": "portfolio/dist",
-  "installCommand": "echo 'skip'"
-}
